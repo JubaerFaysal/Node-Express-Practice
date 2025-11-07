@@ -1,24 +1,19 @@
 const express = require("express");
-const router = express.Router();
+const app = express();
 
-router.get("/", (req, res) => {
-  res.send("Hello, World!");
-  res.end();
-});
-
-router.get("/login", (req, res) => {
+app.post("/post", (req, res) => {
   res.send("post Page");
   res.end();
 });
 
-router.get("/register", (req, res) => {
+app.put("/put", (req, res) => {
   res.send("pub Page");
   res.end();
 });
 
-router.get("/home", (req, res) => {
+app.delete("/delete", (req, res) => {
   res.send("Delete Page");
   res.end();
 });
 
-module.exports = router;
+module.exports = app;
